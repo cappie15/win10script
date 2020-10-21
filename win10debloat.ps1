@@ -277,7 +277,7 @@ Function InstallVLC {
 
 Function InstallCappie {
 	Write-Output "Installing Cappie's customizations"
-	choco install office-tool taskbar-winconfig --params "'/LOCATION:bottom /INK:no /LOCKED:yes /CORTANA:no /KEYBOARD:no /STORE:no /TASKVIEW:no /PEOPLE:no /AUTOTRAY:no /USEPOWERSHELL:yes'" -y 
+	choco install office-tool powertoys taskbar-winconfig --params "'/LOCATION:bottom /INK:no /LOCKED:yes /CORTANA:no /KEYBOARD:no /STORE:no /TASKVIEW:no /PEOPLE:no /AUTOTRAY:no /USEPOWERSHELL:yes'" -y 
 	choco uninstall taskbar-winconfig
 }
 
