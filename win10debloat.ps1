@@ -155,7 +155,7 @@ $tweaks = @(
 	# "DisableThumbsDB",              # "EnableThumbsDB",
 
 	### Application Tweaks ###
-    # "EnableOneDrive",
+        # "EnableOneDrive",
 	"UninstallMsftBloat",           # "InstallMsftBloat",
 	"UninstallThirdPartyBloat",     # "InstallThirdPartyBloat",
 	# "UninstallWindowsStore",      # "InstallWindowsStore",
@@ -181,8 +181,8 @@ $tweaks = @(
 	# "EnableAudio",                # "DisableAudio",
 
 	### Unpinning ###
-	"UnpinStartMenuTiles",
-	#"UnpinTaskbarIcons",
+	"UnpinStartMenuTiles", 		
+	"UnpinTaskbarIcons",
 
 	### Auxiliary Functions ###
 )
