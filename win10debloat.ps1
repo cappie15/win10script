@@ -36,7 +36,8 @@ $tweaks = @(
 	"InstallIrfanview",
 	"InstallVLC",
 	"InstallAdobe",
-	"InstallBrave",
+	"InstallChrome",
+	"InstallCappie",
 	"ChangeDefaultApps",
 
 	### Windows Apps
@@ -180,7 +181,7 @@ $tweaks = @(
 	# "EnableAudio",                # "DisableAudio",
 
 	### Unpinning ###
-	#"UnpinStartMenuTiles",
+	"UnpinStartMenuTiles",
 	#"UnpinTaskbarIcons",
 
 	### Auxiliary Functions ###
@@ -254,26 +255,9 @@ Function InstallJava {
 	choco install jre8 -y
 }
 
-Function InstallBrave {
-	do
- {
-    Clear-Host
-    Write-Host "================ Do You Want to Install Brave Browser? ================"
-    Write-Host "Y: Press 'Y' to do this."
-    Write-Host "2: Press 'N' to skip this."
-	Write-Host "Q: Press 'Q' to stop the entire script."
-    $selection = Read-Host "Please make a selection"
-    switch ($selection)
-    {
-    'y' { 
-		Invoke-WebRequest -Uri "https://laptop-updates.brave.com/download/CHR253" -OutFile $env:USERPROFILE\Downloads\brave.exe
-		~/Downloads/brave.exe
-	}
-    'n' { Break }
-    'q' { Exit  }
-    }
- }
- until ($selection -match "y" -or $selection -match "n" -or $selection -match "q")
+Function InstallChrome {
+	Write-Output "Installing Chrome"
+	choco install googlechrome -y
 	
 }
 Function Install7Zip {
@@ -289,6 +273,12 @@ Function InstallNotepadplusplus {
 Function InstallVLC {
 	Write-Output "Installing VLC"
 	choco install vlc -y
+}
+
+Function InstallCappie {
+	Write-Output "Installing Cappie's customizations"
+	choco install office-tool taskbar-winconfig --params "'/LOCATION:bottom /INK:no /LOCKED:yes /CORTANA:no /KEYBOARD:no /STORE:no /TASKVIEW:no /PEOPLE:no /AUTOTRAY:no /USEPOWERSHELL:yes'" -y 
+	choco uninstall taskbar-winconfig
 }
 
 Function InstallIrfanview {
