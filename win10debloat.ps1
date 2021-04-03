@@ -37,7 +37,12 @@ $tweaks = @(
 	"InstallVLC",
 	"InstallAdobe",
 	"InstallChrome",
-	"InstallCappie",
+	"InstallTaskbarmods",
+	"InstallWindowsterminal",
+	"InstallPowertoys",
+	"InstallSpotify",
+	"InstallNvidia",
+	"InstallGamelaunchers",
 	"ChangeDefaultApps",
 
 	### Windows Apps
@@ -246,10 +251,11 @@ Function InstallTitusProgs {
 	./OOSU10.exe ooshutup10.cfg /quiet
 }
 
-Function InstallAdobe {
-	Show-Choco-Menu -Title "Do you want to install Adobe Acrobat Reader?" -ChocoInstall "adobereader"
+Function InstallGamelaunchers {
+	Show-Choco-Menu -Title "Do you want to install Steam?" -ChocoInstall "steam"
+	Show-Choco-Menu -Title "Do you want to install Ubisoft Connect?" -ChocoInstall "ubisoft-connect"
+	Show-Choco-Menu -Title "Do you want to install Origin?" -ChocoInstall "origin"
 }
-
 Function InstallJava {
 	Write-Output "Installing Java"
 	choco install jre8 -y
@@ -275,10 +281,29 @@ Function InstallVLC {
 	choco install vlc -y
 }
 
-Function InstallCappie {
-	Write-Output "Installing Cappie's customizations"
-	choco install office-tool powertoys taskbar-winconfig --params "'/LOCATION:bottom /INK:no /LOCKED:yes /CORTANA:no /KEYBOARD:no /STORE:no /TASKVIEW:no /PEOPLE:no /AUTOTRAY:no /USEPOWERSHELL:yes'" -y 
-	choco uninstall taskbar-winconfig
+Function InstallPowertoys {
+	Write-Output "Installing PowerToys"
+	choco install powertoys -y
+}
+
+Function InstallNvidia {
+	Write-Output "Installing Nvidia Display Driver"
+	choco install nvidia-display-driver -y
+}
+
+Function InstallSpotify {
+	Write-Output "Installing Spotify"
+	choco install spotify -y
+}
+
+Function InstallWindowsterminal {
+	Write-Output "Installing Windows Terminal"
+	choco install microsoft-windows-terminal -y
+}
+
+Function InstallTaskbarmods {
+	Write-Output "Customizing Taskbar"
+	choco install taskbar-winconfig --params "'/LOCATION:bottom /INK:no /LOCKED:yes /CORTANA:no /KEYBOARD:no /STORE:no /TASKVIEW:no /PEOPLE:no /AUTOTRAY:no /USEPOWERSHELL:yes'" -y 
 }
 
 Function InstallIrfanview {
