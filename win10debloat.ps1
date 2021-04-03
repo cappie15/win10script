@@ -40,6 +40,7 @@ $tweaks = @(
 	"InstallWindowsterminal",
 	"InstallPowertoys",
 	"InstallSpotify",
+	"InstallNordvpn",
 	"InstallNvidia",
 	"InstallGamelaunchers",
 	"ChangeDefaultApps",
@@ -293,6 +294,11 @@ Function InstallNvidia {
 Function InstallSpotify {
 	Write-Output "Installing Spotify"
 	choco install spotify -y
+}
+
+Function InstallNordvpn {
+	Write-Output "Installing NordVPN"
+	choco install nordvpn -y
 }
 
 Function InstallWindowsterminal {
