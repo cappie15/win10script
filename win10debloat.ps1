@@ -35,7 +35,6 @@ $tweaks = @(
 	"InstallNotepadplusplus",
 	"InstallIrfanview",
 	"InstallVLC",
-	"InstallAdobe",
 	"InstallChrome",
 	"InstallTaskbarmods",
 	"InstallWindowsterminal",
