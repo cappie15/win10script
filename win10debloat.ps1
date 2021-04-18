@@ -40,6 +40,7 @@ $tweaks = @(
 	"InstallWindowsterminal",
 	"InstallPowertoys",
 	"InstallSpotify",
+	"InstallNfopad",
 	"InstallNordvpn",
 	"InstallNvidia",
 	"InstallGamelaunchers",
