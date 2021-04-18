@@ -291,6 +291,11 @@ Function InstallNvidia {
 	choco install nvidia-display-driver -y
 }
 
+Function InstallNfopad {
+	Write-Output "Installing NFOpad"
+	choco install nfopad -y
+}
+
 Function InstallSpotify {
 	Write-Output "Installing Spotify"
 	choco install spotify -y
