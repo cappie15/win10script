@@ -33,7 +33,7 @@ $tweaks = @(
 	"InstallTitusProgs", #REQUIRED FOR OTHER PROGRAM INSTALLS!
 	"Install7Zip",
 	"InstallNotepadplusplus",
-	"InstallIrfanview",
+	"InstallImageGlass",
 	"InstallVLC",
 	"InstallChrome",
 	"InstallTaskbarmods",
@@ -317,9 +317,9 @@ Function InstallTaskbarmods {
 	choco install taskbar-winconfig --params "'/LOCATION:bottom /INK:no /LOCKED:yes /CORTANA:no /KEYBOARD:no /STORE:no /TASKVIEW:no /PEOPLE:no /AUTOTRAY:no /USEPOWERSHELL:yes'" -y 
 }
 
-Function InstallIrfanview {
-	Write-Output "Installing IrFanView Image Viewer"
-	choco install irfanview -y
+Function InstallImageGlass {
+	Write-Output "Installing ImageGlass"
+	choco install imageglass -y
 }
 
 Function ChangeDefaultApps {
